@@ -99,13 +99,14 @@ using web.Shared;
 #nullable restore
 #line 46 "/Users/ricksonsa/Projects/web/Client/Components/EarningForm.razor"
        
+    [Parameter] public EventCallback<EarningModel> OnSubmitHandler { get; set; }
     private EarningModel earning = new EarningModel { Date = DateTime.Today };
     private string success = "";
 
     public void HandleValidSubmit()
     {
         HttpClient.PostAsJsonAsync("api/earnings", earning);
-        success = "success";
+        OnSubmitHandler.InvokeAsync(earning);
     }
 
 #line default

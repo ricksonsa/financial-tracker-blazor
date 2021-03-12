@@ -1,7 +1,6 @@
 ﻿@using web.Shared
-@inject HttpClient Http
 
-@if (earnings == null)
+@if (Earnings == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -12,7 +11,7 @@ else
             Earnings
         </div>
         <dv class="card-body">
-            @if (!earnings.Any())
+            @if (!Earnings.Any())
             {
                 <p>No earnings yet.</p>
             }
@@ -28,7 +27,7 @@ else
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var earning in earnings)
+                        @foreach (var earning in Earnings)
                         {
                             <tr>
                                 <td>@earning.Date.ToShortDateString()</td>
@@ -47,11 +46,8 @@ else
 }
 
 @code {
-    private EarningModel[] earnings;
+    [Parameter] public IList<EarningModel> Earnings { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        earnings = await Http.GetFromJsonAsync<EarningModel[]>("api/earnings");
-    }
+
 
 }

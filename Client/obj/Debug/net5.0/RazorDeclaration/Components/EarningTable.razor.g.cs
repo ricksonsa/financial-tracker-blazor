@@ -97,20 +97,16 @@ using web.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "/Users/ricksonsa/Projects/web/Client/Components/EarningTable.razor"
+#line 48 "/Users/ricksonsa/Projects/web/Client/Components/EarningTable.razor"
        
-    private EarningModel[] earnings;
+    [Parameter] public IList<EarningModel> Earnings { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        earnings = await Http.GetFromJsonAsync<EarningModel[]>("api/earnings");
-    }
+
 
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

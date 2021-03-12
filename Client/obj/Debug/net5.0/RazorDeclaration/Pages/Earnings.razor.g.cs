@@ -89,6 +89,13 @@ using web.Client.Components;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "/Users/ricksonsa/Projects/web/Client/Pages/Earnings.razor"
+using web.Shared;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/earnings")]
     public partial class Earnings : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -97,6 +104,26 @@ using web.Client.Components;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 15 "/Users/ricksonsa/Projects/web/Client/Pages/Earnings.razor"
+       
+    private IList<EarningModel> earnings;
+
+    void OnSubmitHandler(EarningModel earning)
+    {
+        earnings.Add(earning);
+        StateHasChanged();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        earnings = await Http.GetFromJsonAsync<EarningModel[]>("api/earnings");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

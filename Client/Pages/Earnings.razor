@@ -1,15 +1,28 @@
 ﻿@page "/earnings"
 @using web.Client.Components
+@inject HttpClient Http
+@using web.Shared
 
 <div class="row">
     <div class="col-md-8 col-sm-12">
-        <EarningTable></EarningTable>
+        <EarningTable Earnings="@earnings"></EarningTable>
     </div>
     <div class="col-md-4 col-sm-12">
-        <EarningForm></EarningForm>
+        <EarningForm OnSubmitHandler="OnSubmitHandler"></EarningForm>
     </div>
 </div>
 
 @code {
+    private IList<EarningModel> earnings;
 
+    void OnSubmitHandler(EarningModel earning)
+    {
+        earnings.Add(earning);
+        StateHasChanged();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        earnings = await Http.GetFromJsonAsync<EarningModel[]>("api/earnings");
+    }
 }
