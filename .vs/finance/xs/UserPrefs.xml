@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{EC257990-9C25-4EA9-A199-1504E6F03F98}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Client/Components/EarningTable.razor">
+    <Files>
+      <File FileName="Client/Pages/Earnings.razor" Line="14" Column="8" />
+      <File FileName="Client/Shared/NavMenu.razor" Line="26" Column="55" />
+      <File FileName="Client/Components/EarningForm.razor" Line="53" Column="29" />
+      <File FileName="Client/Components/EarningModel.cs" Line="5" Column="21" />
+      <File FileName="Shared/EarningCategory.cs" Line="8" Column="1" />
+      <File FileName="Client/Components/EarningTable.razor" Line="3" Column="1" />
+      <File FileName="Server/Controllers/HomeController.cs" Line="7" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="finance" expanded="True">
+            <Node name="web.Client" expanded="True">
+              <Node name="Components" expanded="True">
+                <Node name="EarningTable.razor" selected="True" />
+              </Node>
+              <Node name="Pages" expanded="True" />
+            </Node>
+            <Node name="web.Server" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="web.Shared" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.web.Server PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

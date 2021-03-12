@@ -1,0 +1,12 @@
+/Users/ricksonsa/Projects/web/Shared/bin/Debug/net5.0/web.Shared.deps.json
+/Users/ricksonsa/Projects/web/Shared/bin/Debug/net5.0/web.Shared.dll
+/Users/ricksonsa/Projects/web/Shared/bin/Debug/net5.0/ref/web.Shared.dll
+/Users/ricksonsa/Projects/web/Shared/bin/Debug/net5.0/web.Shared.pdb
+/Users/ricksonsa/Projects/web/Shared/obj/Debug/net5.0/web.Shared.csprojAssemblyReference.cache
+/Users/ricksonsa/Projects/web/Shared/obj/Debug/net5.0/web.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ricksonsa/Projects/web/Shared/obj/Debug/net5.0/web.Shared.AssemblyInfoInputs.cache
+/Users/ricksonsa/Projects/web/Shared/obj/Debug/net5.0/web.Shared.AssemblyInfo.cs
+/Users/ricksonsa/Projects/web/Shared/obj/Debug/net5.0/web.Shared.csproj.CoreCompileInputs.cache
+/Users/ricksonsa/Projects/web/Shared/obj/Debug/net5.0/web.Shared.dll
+/Users/ricksonsa/Projects/web/Shared/obj/Debug/net5.0/ref/web.Shared.dll
+/Users/ricksonsa/Projects/web/Shared/obj/Debug/net5.0/web.Shared.pdb

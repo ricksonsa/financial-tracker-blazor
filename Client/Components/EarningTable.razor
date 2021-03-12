@@ -1,0 +1,57 @@
+﻿@using web.Shared
+@inject HttpClient Http
+
+@if (earnings == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="card">
+        <div class="card-header">
+            Earnings
+        </div>
+        <dv class="card-body">
+            @if (!earnings.Any())
+            {
+                <p>No earnings yet.</p>
+            }
+            else
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Subject</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var earning in earnings)
+                        {
+                            <tr>
+                                <td>@earning.Date.ToShortDateString()</td>
+                                <td>@earning.Subject</td>
+                                <td>@earning.Category</td>
+                                <td>@earning.Amount</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+
+        </dv>
+    </div>
+    
+}
+
+@code {
+    private EarningModel[] earnings;
+
+    protected override async Task OnInitializedAsync()
+    {
+        earnings = await Http.GetFromJsonAsync<EarningModel[]>("api/earnings");
+    }
+
+}
